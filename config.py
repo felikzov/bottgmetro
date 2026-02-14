@@ -5,7 +5,7 @@ import os
 from typing import List
 
 # Токен бота (рекомендуется использовать переменную окружения)
-BOT_TOKEN = os.getenv("BOT_TOKEN", "8510082538:AAGLGVkCdDcMuTD0ELyVVJ_G2hcCV4VDlA4")
+BOT_TOKEN = os.getenv("BOT_TOKEN", "")
 
 # ID канала для публикации
 CHANNEL_ID = int(os.getenv("CHANNEL_ID", "-1002422885792"))
