@@ -3,9 +3,13 @@
 """
 import os
 from typing import List
+from datetime import timezone, timedelta
+
+# Часовой пояс Санкт-Петербурга (UTC+3)
+SPB_TIMEZONE = timezone(timedelta(hours=3))
 
 # Токен бота (рекомендуется использовать переменную окружения)
-BOT_TOKEN = os.getenv("BOT_TOKEN", "")
+BOT_TOKEN = os.getenv("BOT_TOKEN", "8510082538:AAGLGVkCdDcMuTD0ELyVVJ_G2hcCV4VDlA4")
 
 # ID канала для публикации
 CHANNEL_ID = int(os.getenv("CHANNEL_ID", "-1002422885792"))
