@@ -7,7 +7,7 @@ from telebot import TeleBot, types
 
 from config import (
     LINES, LINE_EMOJI, STATIONS, TIMES, States,
-    MAX_COMMENT_LENGTH, MAX_TRAIN_NAME_LENGTH, CHANNEL_ID
+    MAX_COMMENT_LENGTH, MAX_TRAIN_NAME_LENGTH, CHANNEL_ID, SPB_TIMEZONE
 )
 from database import Database
 from state_manager import StateManager
@@ -336,7 +336,9 @@ class ReportBot:
             user_id = call.from_user.id
             time_str = call.data.split("_", 1)[1]
             minutes_ago = parse_time_ago(time_str)
-            real_time = (datetime.now() - timedelta(minutes=minutes_ago)).strftime("%H:%M")
+            # Используем время в часовом поясе Санкт-Петербурга
+            now_spb = datetime.now(SPB_TIMEZONE)
+            real_time = (now_spb - timedelta(minutes=minutes_ago)).strftime("%H:%M")
             
             self.state_mgr.set_data(user_id, 'time', real_time)
             self.state_mgr.set_state(user_id, States.ROUTE_CHOICE)
