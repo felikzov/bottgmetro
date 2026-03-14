@@ -28,8 +28,8 @@ LOG_FILE = "bot.log"
 LOG_LEVEL = "INFO"
 
 # Настройки polling (оптимизировано для Android/MIUI)
-POLLING_TIMEOUT = 10  # Уменьшено для быстрого отклика на Android
-LONG_POLLING_TIMEOUT = 5  # Уменьшено для быстрого отклика на Android
+POLLING_TIMEOUT = 30  # Уменьшено для быстрого отклика на Android
+LONG_POLLING_TIMEOUT = 25  # Уменьшено для быстрого отклика на Android
 
 # Keepalive для поддержания активности (в секундах)
 KEEPALIVE_INTERVAL = 20  # Пинг каждые 20 секунд
