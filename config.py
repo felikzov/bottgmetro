@@ -32,7 +32,7 @@ POLLING_TIMEOUT = 30  # Уменьшено для быстрого отклик�
 LONG_POLLING_TIMEOUT = 25  # Уменьшено для быстрого отклика на Android
 
 # Keepalive для поддержания активности (в секундах)
-KEEPALIVE_INTERVAL = 20  # Пинг каждые 20 секунд
+KEEPALIVE_INTERVAL = 10  # Пинг каждые 20 секунд
 
 # Лимиты
 MAX_COMMENT_LENGTH = 500
